@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Contact | Muhammad Saqib</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;600;700;800&family=Sora:wght@600;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <div class="bg-glow glow-one"></div>
+  <div class="bg-glow glow-two"></div>
+
+  <header class="site-header">
+    <a class="logo" href="index.html">MS</a>
+    <button class="menu-toggle" aria-label="Open menu">Menu</button>
+    <nav class="nav-links">
+      <a href="index.html">Home</a>
+      <a href="certificates.html">Certificates</a>
+      <a href="skills.html">Skills</a>
+      <a class="active" href="contact.html">Contact</a>
+    </nav>
+  </header>
+
+  <main class="page">
+    <section class="page-head">
+      <p class="eyebrow">Let's Connect</p>
+      <h1>Contact Me</h1>
+      <p>Share your details and message. It opens your email app ready to send.</p>
+    </section>
+
+    <section class="contact-card">
+      <div class="contact-intro">
+        <h3>Professional Contact Box</h3>
+        <p>Fill your information and message below, then send directly to Muhammad Saqib.</p>
+      </div>
+
+      <form class="contact-form" id="contact-form">
+        <div class="field-row">
+          <div class="field-group">
+            <label for="sender-name">Your Name</label>
+            <input id="sender-name" name="sender-name" type="text" placeholder="John Doe" required>
+          </div>
+          <div class="field-group">
+            <label for="sender-email">Your Email</label>
+            <input id="sender-email" name="sender-email" type="email" placeholder="john@email.com" required>
+          </div>
+        </div>
+        <div class="field-group">
+          <label for="sender-subject">Subject</label>
+          <input id="sender-subject" name="sender-subject" type="text" placeholder="Opportunity / Project Discussion" required>
+        </div>
+        <div class="field-group">
+          <label for="sender-message">Message</label>
+          <textarea id="sender-message" name="sender-message" rows="7" placeholder="Write your professional message..." required></textarea>
+        </div>
+        <button class="btn btn-primary" type="submit">Send Message</button>
+      </form>
+
+      <div class="copy-email-wrap">
+        <p>Direct Email: <a href="mailto:Engrsaqibkakar241@gmail.com">Engrsaqibkakar241@gmail.com</a></p>
+        <button class="btn btn-ghost copy-email-btn" data-copy-text="Engrsaqibkakar241@gmail.com">Copy Email</button>
+      </div>
+    </section>
+  </main>
+
+  <script src="script.js"></script>
+</body>
+</html>
