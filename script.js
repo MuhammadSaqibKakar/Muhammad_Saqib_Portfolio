@@ -108,3 +108,33 @@ if (lightbox && lightboxImage && lightboxClose && certCards.length > 0) {
     }
   });
 }
+
+// Compatibility fallback for browsers that still have the old homepage cached.
+// The legacy button pointed to the removed JPEG CV. Load the new PDF downloader
+// on demand instead, so the cached button still produces Muhammad_Saqib_CV.pdf.
+document.addEventListener("click", (event) => {
+  const target = event.target;
+  if (!(target instanceof Element)) return;
+  const button = target.closest(".download-cv-btn");
+  if (!button || button.dataset.cvReady === "1") return;
+
+  const href = button.getAttribute("href") || "";
+  if (!href.includes("assets/cv/cv.jpeg")) return;
+
+  event.preventDefault();
+  button.id = "download-cv";
+  button.dataset.cvReady = "loading";
+
+  const loader = document.createElement("script");
+  loader.src = `cv-download.js?v=20260907-2`;
+  loader.onload = () => {
+    button.dataset.cvReady = "1";
+    document.dispatchEvent(new Event("DOMContentLoaded"));
+    button.click();
+  };
+  loader.onerror = () => {
+    button.dataset.cvReady = "";
+    alert("CV downloader could not load. Please refresh the page and try again.");
+  };
+  document.head.appendChild(loader);
+});
