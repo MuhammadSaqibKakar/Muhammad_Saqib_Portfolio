@@ -1,0 +1,30 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="750" viewBox="0 0 1200 750" role="img" aria-labelledby="title desc">
+<title id="title">Illustrative artwork for BSDI Programme Website</title><desc id="desc">A conceptual dashboard illustration without actual system data.</desc>
+<defs><linearGradient id="bg" x1="0" x2="1" y1="0" y2="1"><stop stop-color="#123b8a"/><stop offset="1" stop-color="#0e91ec"/></linearGradient><linearGradient id="panel" x1="0" x2="1" y1="0" y2="1"><stop stop-color="#ffffff"/><stop offset="1" stop-color="#e7eefb"/></linearGradient></defs>
+<rect width="1200" height="750" fill="url(#bg)"/><circle cx="1080" cy="35" r="260" fill="#0de1f3" opacity=".17"/><circle cx="35" cy="725" r="240" fill="#ffffff" opacity=".08"/>
+<rect x="95" y="76" width="1010" height="596" rx="31" fill="#091735" opacity=".16"/>
+<rect x="83" y="65" width="1010" height="596" rx="30" fill="url(#panel)"/>
+<path d="M83 150V95Q83 65 113 65H1063Q1093 65 1093 95V150Z" fill="#ffffff"/>
+<circle cx="119" cy="108" r="8" fill="#f08385"/><circle cx="146" cy="108" r="8" fill="#eec36a"/><circle cx="173" cy="108" r="8" fill="#69c9a9"/>
+<rect x="209" y="96" width="300" height="24" rx="12" fill="#eff3fa"/><text x="229" y="113" font-size="15" font-family="Arial, sans-serif" font-weight="700" fill="#123b8a">BSDI Programme</text>
+<rect x="1017" y="95" width="44" height="26" rx="13" fill="#0de1f3" opacity=".65"/>
+<rect x="105" y="172" width="223" height="470" rx="20" fill="#f2f5fa"/>
+<rect x="127" y="191" width="40" height="40" rx="12" fill="#0e91ec"/><text x="140" y="218" font-size="25" font-family="Arial, sans-serif" font-weight="800" fill="#fff">B</text>
+<rect x="128" y="242" rx="11" width="175" height="51" fill="#0e91ec" opacity="0.92"/><text x="149" y="274" font-size="18" font-weight="700" fill="#ffffff">Overview</text><rect x="128" y="311" rx="11" width="175" height="51" fill="#e6ecf5" opacity="1"/><text x="149" y="343" font-size="18" font-weight="700" fill="#52617e">Project views</text><rect x="128" y="380" rx="11" width="175" height="51" fill="#e6ecf5" opacity="1"/><text x="149" y="412" font-size="18" font-weight="700" fill="#52617e">Reports</text>
+<rect x="130" y="547" width="166" height="11" rx="5" fill="#d9e3f0"/><rect x="130" y="569" width="120" height="11" rx="5" fill="#d9e3f0"/>
+<text x="364" y="226" font-family="Arial, sans-serif" font-weight="800" font-size="34" fill="#123b8a">BSDI Programme</text>
+<text x="366" y="258" font-family="Arial, sans-serif" font-size="18" fill="#62718e">Public programme information</text>
+<rect x="365" y="285" width="210" height="89" rx="18" fill="#ffffff" stroke="#dce4f0" stroke-width="2"/>
+<rect x="388" y="307" width="94" height="10" rx="5" fill="#d6e4f5"/><rect x="388" y="332" width="141" height="21" rx="10" fill="#0e91ec" opacity=".72"/>
+<rect x="595" y="285" width="210" height="89" rx="18" fill="#ffffff" stroke="#dce4f0" stroke-width="2"/>
+<rect x="618" y="307" width="120" height="10" rx="5" fill="#d6e4f5"/><rect x="618" y="332" width="104" height="21" rx="10" fill="#0de1f3"/>
+<rect x="825" y="285" width="235" height="89" rx="18" fill="#ffffff" stroke="#dce4f0" stroke-width="2"/>
+<rect x="849" y="307" width="117" height="10" rx="5" fill="#d6e4f5"/><rect x="849" y="332" width="174" height="21" rx="10" fill="#0e91ec" opacity=".42"/>
+<rect x="365" y="397" width="695" height="224" rx="19" fill="#ffffff" stroke="#dce4f0" stroke-width="2"/>
+<text x="388" y="427" font-family="Arial, sans-serif" font-size="19" font-weight="700" fill="#123b8a">Project overview</text>
+<path d="M389 554H1031M389 507H1031M389 460H1031" stroke="#e7edf5" stroke-width="2"/>
+<rect x="270" y="413" width="38" height="118" rx="10" fill="#0e91ec" opacity="0.52"/><rect x="345" y="371" width="38" height="160" rx="10" fill="#0e91ec" opacity="0.5800000000000001"/><rect x="420" y="388" width="38" height="143" rx="10" fill="#0e91ec" opacity="0.64"/><rect x="495" y="329" width="38" height="202" rx="10" fill="#0e91ec" opacity="0.7"/><rect x="570" y="364" width="38" height="167" rx="10" fill="#0e91ec" opacity="0.76"/><rect x="645" y="301" width="38" height="230" rx="10" fill="#0de1f3" opacity="0.8200000000000001"/><rect x="720" y="341" width="38" height="190" rx="10" fill="#0e91ec" opacity="0.88"/>
+<rect x="840" y="450" width="190" height="122" rx="14" fill="#f2f6fb"/><rect x="859" y="471" width="127" height="12" rx="6" fill="#0e91ec" opacity=".58"/><rect x="859" y="496" width="143" height="11" rx="5" fill="#cad6e7"/><rect x="859" y="521" width="102" height="11" rx="5" fill="#cad6e7"/>
+<rect x="406" y="691" width="388" height="32" rx="16" fill="#ffffff" opacity=".18"/>
+<text x="600" y="712" font-family="Arial, sans-serif" font-size="16" text-anchor="middle" font-weight="700" letter-spacing="1.2" fill="#ffffff">ILLUSTRATIVE PREVIEW · NO LIVE PROJECT DATA</text>
+</svg>
