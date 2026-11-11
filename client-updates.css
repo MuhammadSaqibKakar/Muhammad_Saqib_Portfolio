@@ -44,3 +44,6 @@ button,input,textarea{font:inherit}button{cursor:pointer}h2,h3{line-height:1.3}h
 
 /* Four professional work cards: two columns on larger screens. */
 @media (min-width: 769px) { .work-preview { grid-template-columns: repeat(2, minmax(0,1fr)); } }
+
+/* Website previews preserve their 16:10 composition without square/16:9 cropping. */
+.case-study figure img[src$="-website-preview.webp"] { aspect-ratio: 16 / 10; object-fit: contain; background: #f4f7fb; }
