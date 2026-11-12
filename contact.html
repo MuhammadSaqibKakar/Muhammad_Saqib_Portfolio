@@ -42,15 +42,15 @@
 <main id="main" class="page">
 <section class="page-head">
 <p class="eyebrow">Discuss a project</p>
-<h1>Tell me what needs to work better.</h1>
-<p>Available for fixed-scope remote projects, 8–12 hours per week outside my BSDI role. A short brief is enough to start discussing scope and a quote.</p>
+<h1>Let’s discuss what you want to build.</h1>
+<p>Based in Quetta, Pakistan, and open to defined remote projects and software engineering opportunities. Tell me the problem, the intended result and your preferred timeline.</p>
 </section>
 <section class="contact-card">
 <div class="contact-intro">
-<h2>Prepare your project email</h2>
-<p>This form opens a draft in your email app. Review it and send it yourself. No message is submitted to a server by this page.</p>
+<h2>Send a project enquiry</h2>
+<p>This form can submit an enquiry through FormSubmit, a third-party form service. Prefer not to use a form provider? Use the email-draft or copy options below. Never send passwords or confidential records.</p>
 </div>
-<form class="contact-form" id="contact-form">
+<form class="contact-form" id="contact-form" action="https://formsubmit.co/Engrsaqibkakar241@gmail.com" method="POST"><input type="hidden" name="_subject" value="Portfolio project enquiry"><input type="hidden" name="_template" value="table">
 <div class="field-row">
 <div class="field-group">
 <label for="sender-name">Your name</label>
@@ -84,10 +84,11 @@
 </div>
 <div class="honeypot" aria-hidden="true">
 <label for="company-website">Leave this field blank</label>
-<input id="company-website" name="company-website" tabindex="-1" autocomplete="off">
+<input id="company-website" name="_honey" tabindex="-1" autocomplete="off">
 </div>
 <div class="form-actions">
-<button class="btn btn-primary" type="submit">Open email draft</button>
+<button class="btn btn-primary" type="submit" id="send-enquiry">Send enquiry <span aria-hidden="true">↗</span></button>
+<button class="btn btn-ghost" type="button" id="email-draft">Open email draft</button>
 <button class="btn btn-ghost" type="button" id="copy-brief">Copy brief</button>
 </div>
 <p class="form-status" id="contact-status" role="status" aria-live="polite">
@@ -98,9 +99,9 @@
 </p>
 <button class="btn btn-ghost copy-email-btn" type="button">Copy email address</button>
 </div>
-<p class="small-note">If your email app does not open, copy the brief and address into your usual mail service.</p>
+<p class="small-note">Form submissions are handled by <a href="https://formsubmit.co/" target="_blank" rel="noopener noreferrer">FormSubmit</a>, not stored by this GitHub Pages site. Initial activation requires confirming the recipient email address. If delivery is unavailable, choose Open email draft or Copy brief.</p>
 <noscript>
-<p>JavaScript is needed for the email builder. Write directly to Engrsaqibkakar241 [at] gmail [dot] com.</p>
+<p>Without JavaScript, the form is submitted through FormSubmit. You may also email Engrsaqibkakar241 [at] gmail [dot] com directly.</p>
 </noscript>
 </section>
 </main>
