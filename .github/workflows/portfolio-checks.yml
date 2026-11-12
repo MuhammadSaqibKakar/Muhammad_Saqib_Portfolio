@@ -1,0 +1,20 @@
+name: Portfolio quality checks
+
+on:
+  push:
+    branches: [main]
+  pull_request:
+    branches: [main]
+
+jobs:
+  validate:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - name: Validate JavaScript syntax
+        run: |
+          node --check script.js
+          node --check cv-download.js
+          node --check scripts/verify-site.mjs
+      - name: Validate static pages and assets
+        run: node scripts/verify-site.mjs
