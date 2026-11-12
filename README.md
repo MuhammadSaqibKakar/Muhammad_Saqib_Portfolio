@@ -1,54 +1,42 @@
-# Muhammad Saqib Kakar — Portfolio
+# Muhammad Saqib Kakar — Software Engineer Portfolio
 
-Source for my current personal portfolio website, built to present my software engineering experience, projects, technical skills, certifications, and downloadable CVs in a clean multi-page interface.
+Live site: https://muhammadsaqibkakar.github.io/Muhammad_Saqib_Portfolio/
 
-🌐 **Live portfolio:** https://muhammadsaqibkakar.github.io/Muhammad_Saqib_Portfolio/
+A lightweight, responsive GitHub Pages portfolio showcasing documented software-engineering work, skills, professional experience, education and ways to get in touch.
 
-## ✨ Sections
+## Featured work
 
-- Home / professional introduction
-- Experience
-- Projects
-- Technical skills
-- Certifications
-- Contact
-- CV download options
+- **BSDI Programme Website** — public-sector information website, Node.js / HTML / CSS / JavaScript.
+- **Pasni Road Project Controls** — ASP.NET Core / Razor Pages / SQLite project controls system (restricted access).
+- **Khuzdar Airport Monitoring** — Node.js construction monitoring and reporting (restricted access; site details concealed in previews).
+- **BSDI Completed Projects Portal** — district-based reporting portal, Node.js / Vite / MySQL.
 
-## 🛠️ Tech Stack
+Preview images use screenshots supplied by the portfolio owner; they are not live feeds. Project access restrictions are intentional. No restricted implementation details, credentials, or internal reports are published here.
 
-- **HTML5**
-- **CSS3**
-- **JavaScript**
-- **GitHub Pages**
+## Pages
 
-## 📁 Structure
+Home, Services, Work, Experience, Technical Skills, Certificates, Contact, and Privacy.
 
-```text
-.
-├── index.html
-├── experience.html
-├── projects.html
-├── skills.html
-├── certificates.html
-├── contact.html
-├── style.css
-├── script.js
-├── cv-download.js
-├── CV/
-├── Image/
-├── assets/
-└── certificates/
-```
+## Technology
 
-## 🚀 Deployment
+HTML5, CSS3, JavaScript, accessible native controls, structured metadata and GitHub Pages. Images use optimized WebP where practical.
 
-The site is designed for static hosting through **GitHub Pages**. Updates pushed to the configured Pages branch are reflected in the live portfolio after deployment.
+## Contact form setup
 
-## 🎯 Purpose
+The Contact page uses FormSubmit for HTTPS form delivery and offers an email-draft fallback. **First-time submission requires the portfolio email owner to confirm the activation email** from FormSubmit before delivery is fully active. Do not assume that the contact form is verified until this activation and a successful end-to-end test are complete.
 
-This repository is the public-facing portfolio for **Muhammad Saqib Kakar**, Software Engineer based in Quetta, Pakistan, and serves as a central place to review professional experience, selected work, skills, and credentials.
+Form submissions are routed by a third party. See `privacy.html` for the published notice.
 
----
+## Domain setup
 
-**Muhammad Saqib Kakar**  
-Software Engineer · Backend Developer · Web Developer · Data & IT Systems
+Do not add a `CNAME` file or change canonical/sitemap URLs until ownership of a custom domain has been confirmed and the DNS/HTTPS setup is complete. For now, the GitHub Pages URL is canonical.
+
+## Publishing
+
+GitHub Pages serves this static site from the configured branch. No Node.js runtime or paid hosting is required.
+
+## Quality checks
+
+When files change, validate the HTML structure, internal asset paths, structured data and JavaScript syntax before deployment. Review responsive layouts and keyboard navigation manually as well.
+
+© Muhammad Saqib Kakar · Software Engineer · Quetta, Pakistan
