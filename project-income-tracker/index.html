@@ -3,119 +3,140 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <meta name="theme-color" content="#f5f7fa">
+  <meta name="theme-color" content="#ffffff">
   <meta name="description" content="A simple personal project and income tracker for Saqib Kakar.">
   <title>Projects &amp; Earnings | Saqib Kakar</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700;800&family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap" rel="stylesheet">
   <style>
-  :root{color-scheme:light;--bg:#f5f7fa;--surface:#ffffff;--line:#e5eaf0;--ink:#172439;--muted:#64748b;--navy:#1f487d;--blue:#205ab2;--soft-blue:#eff6ff;--green:#087e57;--red:#c53c48;--amber:#a36511;--radius:13px}
+
+  :root{color-scheme:light;--bg:#f7f9fc;--surface:#fff;--line:#e8ecf2;--ink:#15233b;--muted:#697993;--navy:#1d3152;--blue:#3457e2;--soft-blue:#f0f3ff;--green:#098669;--red:#d44e5b;--amber:#af7c24;--radius:16px;--font:'DM Sans','Inter',-apple-system,BlinkMacSystemFont,'Segoe UI',sans-serif;--display:'Plus Jakarta Sans','Inter Display','Inter','DM Sans',sans-serif}
   *,*::before,*::after{box-sizing:border-box}
-  html{scroll-behavior:smooth}
-  body{margin:0;background:var(--bg);color:var(--ink);font:14px/1.48 system-ui,-apple-system,BlinkMacSystemFont,"Segoe UI",sans-serif}
-  button,input,select,textarea{font:inherit}button{cursor:pointer}button:disabled{opacity:.55;cursor:not-allowed}
+  html{scroll-behavior:smooth;scroll-padding-top:104px}
+  body{margin:0;min-height:100vh;color:var(--ink);background:linear-gradient(180deg,#fbfcff 0,#f6f8fc 260px,#f7f9fc 100%);font:14px/1.6 var(--font);-webkit-font-smoothing:antialiased;text-rendering:optimizeLegibility}
+  button,input,select,textarea{font:inherit}button{cursor:pointer}button:disabled{opacity:.5;cursor:not-allowed}
   a{color:inherit;text-decoration:none}a:hover{text-decoration:none}
-  :focus-visible{outline:3px solid #8cb4fa;outline-offset:2px}
-  .site-header{background:#fff;border-bottom:1px solid var(--line)}
-  .header-inner{max-width:1450px;margin:auto;padding:12px 28px;display:flex;gap:22px;align-items:center}
-  .brand{display:flex;align-items:center;gap:10px;white-space:nowrap}
-  .mark{width:34px;height:34px;border-radius:9px;background:#1a477d;color:white;display:grid;place-items:center;font-size:12px;font-weight:800}
-  .brand-title{display:block;font-size:14px;font-weight:800;letter-spacing:-.025em;line-height:1.2}
-  .brand-sub{display:block;color:var(--muted);font-weight:700;font-size:9px;letter-spacing:.1em;margin-top:2px}
-  .nav{display:flex;gap:5px;margin-left:40px;align-items:center}
-  .nav a{font-size:12px;font-weight:650;color:#617086;padding:8px 11px;border-radius:8px;white-space:nowrap}
-  .nav a:hover,.nav a.active{background:var(--soft-blue);color:#20549c}
-  .header-status{margin-left:auto;font-size:11px;color:#65778b;white-space:nowrap}
-  .header-status:before{content:"";display:inline-block;width:7px;height:7px;border-radius:50%;background:#10a373;margin-right:7px}
-  .main{max-width:1450px;padding:28px 28px 46px;margin:auto}
-  .intro{display:flex;gap:18px;align-items:center;justify-content:space-between;margin-bottom:21px}
-  .eyebrow{margin:0 0 4px;color:#64748b;font-size:10px;letter-spacing:.11em;font-weight:800}
-  h1{font-size:clamp(24px,2.5vw,30px);letter-spacing:-.045em;line-height:1.18;margin:0;font-weight:800}
-  .intro p.desc{color:#6b7a8f;font-size:12px;margin:6px 0 0}
-  .top-actions{display:flex;align-items:center;gap:9px;flex-wrap:wrap}
-  .btn{border:1px solid transparent;border-radius:9px;padding:10px 14px;font-size:12px;font-weight:700;display:inline-flex;align-items:center;justify-content:center;gap:7px;white-space:nowrap;transition:background .16s}
-  .btn svg,.action svg{width:14px;height:14px}
-  .btn.primary{background:#2057a1;color:#fff}
-  .btn.primary:hover{background:#174782}
-  .btn.light,.btn.tiny{background:#fff;color:#2b4464;border-color:#dce4ee}
-  .btn.light:hover,.btn.tiny:hover{background:#f5f9fd}
-  .btn.tiny{padding:8px 10px;font-size:11px}
-  .btn.ghost{background:none;color:var(--blue)}
-  .btn.danger{color:var(--red)}
-  .stats{display:grid;grid-template-columns:repeat(5,minmax(0,1fr));gap:11px;margin:0 0 26px}
-  .stat{min-width:0;background:var(--surface);border:1px solid var(--line);padding:19px 18px 17px;border-radius:12px}
-  .stat-label{color:#657389;font-size:11px;font-weight:650}
-  .stat-number{font-size:clamp(20px,2vw,28px);letter-spacing:-.06em;font-weight:790;line-height:1.1;margin:10px 0 0;overflow-wrap:anywhere;font-variant-numeric:tabular-nums}
-  .stat-foot{font-size:10px;color:#8290a0;margin-top:9px}
+  :focus-visible{outline:3px solid #a2b0ff;outline-offset:2px}
+  .site-header{background:rgba(255,255,255,.96);border-bottom:1px solid var(--line);position:sticky;top:0;z-index:20;backdrop-filter:blur(18px)}
+  .header-inner{max-width:1360px;margin:0 auto;padding:13px 30px;display:flex;align-items:center;gap:34px;min-height:76px}
+  .brand{display:flex;align-items:center;gap:12px;white-space:nowrap;min-width:200px}
+  .mark{width:42px;height:42px;border-radius:13px;background:linear-gradient(145deg,#263c63,#192844);color:#fff;display:grid;place-items:center;font-size:13px;font-family:var(--display);font-weight:800;letter-spacing:.04em;box-shadow:0 5px 12px #1d31521b}
+  .brand-title{display:block;font:800 15px/1.3 var(--display);letter-spacing:-.035em}
+  .brand-sub{display:block;margin-top:2px;color:#8692a5;font-size:10px;font-weight:800;letter-spacing:.11em}
+  .nav{display:flex;align-items:center;gap:7px;margin-left:9px}
+  .nav a{font-size:13px;font-weight:700;color:#67768b;letter-spacing:-.01em;padding:10px 16px;border-radius:10px;white-space:nowrap;transition:.16s ease}
+  .nav a:hover{background:#f6f7fb;color:#223252}
+  .nav a.active{background:#edf1ff;color:#304fc4}
+  .header-status{margin-left:auto;font-size:12px;color:#76869c;white-space:nowrap;display:inline-flex;align-items:center;gap:8px}
+  .header-status:before{content:'';width:8px;height:8px;display:block;border-radius:50%;background:#11ac79;box-shadow:0 0 0 4px #e9f9f2}
+  .main{max-width:1360px;margin:0 auto;padding:43px 30px 38px}
+  .intro{display:flex;gap:24px;align-items:center;justify-content:space-between;margin-bottom:27px}
+  .eyebrow{display:flex;align-items:center;gap:9px;margin:0 0 8px;color:#486bc8;font-size:11px;font-weight:800;letter-spacing:.13em;text-transform:uppercase}
+  .eyebrow::before{content:'';height:6px;width:6px;border-radius:50%;background:#647ef0}
+  h1{font:800 clamp(28px,3vw,34px)/1.22 var(--display);letter-spacing:-.055em;margin:0;color:#172740}
+  .intro p.desc{color:#5e7089;font-size:14px;margin:9px 0 0}
+  .top-actions{display:flex;align-items:center;gap:10px;flex-wrap:wrap}
+  .btn{border:1px solid transparent;border-radius:11px;padding:11px 18px;min-height:44px;font-size:13px;font-weight:800;display:inline-flex;align-items:center;justify-content:center;gap:9px;white-space:nowrap;transition:background .16s,box-shadow .16s,transform .16s;letter-spacing:-.014em}
+  .btn:active{transform:translateY(1px)}.btn svg,.action svg{width:17px;height:17px}
+  .btn.primary{background:#3457e2;color:#fff;box-shadow:0 5px 14px #3457e224}
+  .btn.primary:hover{background:#2548ce;box-shadow:0 6px 19px #3457e238}
+  .btn.light,.btn.tiny{background:#fff;color:#334461;border-color:#dce3ef;box-shadow:0 1px 1px #1b2b4608}
+  .btn.light:hover,.btn.tiny:hover{background:#f7f9ff;border-color:#c2cce2}
+  .btn.tiny{padding:8px 13px;min-height:38px;font-size:12px}
+  .btn.ghost{background:none;color:var(--blue)}.btn.danger{color:var(--red)}
+  .stats{display:grid;grid-template-columns:repeat(5,minmax(0,1fr));gap:14px;margin:0 0 37px}
+  .stat{position:relative;min-width:0;background:var(--surface);border:1px solid #e4e9f1;border-radius:17px;padding:22px 21px 19px;min-height:164px;box-shadow:0 5px 22px #18294406;overflow:hidden}
+  .stat:before{content:'';position:absolute;top:0;left:0;right:0;height:3px;background:transparent}
+  .stat-label{color:#64748c;font-size:13px;font-weight:700;letter-spacing:-.012em;padding-right:35px;line-height:1.4}
+  .stat-icon{position:absolute;top:19px;right:18px;width:33px;height:33px;border-radius:10px;background:#f0f3fb;display:grid;place-items:center;color:#6576a3}
+  .stat-icon svg{width:17px;height:17px;fill:none;stroke:currentColor;stroke-width:1.8;stroke-linecap:round;stroke-linejoin:round}
+  .stat:nth-child(2) .stat-icon{background:#eaf9f2;color:#149468}
+  .stat:nth-child(3) .stat-icon{background:#fff2f1;color:#d36a69}
+  .stat:nth-child(5) .stat-icon{background:#fff6e8;color:#c08e3b}
+  .stat-number{font:800 clamp(23px,2.1vw,29px)/1.18 var(--display);letter-spacing:-.055em;margin:24px 0 0;overflow-wrap:anywhere;font-variant-numeric:tabular-nums}
+  .stat-foot{font-size:11px;color:#728198;margin-top:11px;font-weight:500}
+  .stat-foot strong{font-weight:800;color:#62718a}
   .stat-number.positive,.money-in{color:var(--green)}.stat-number.negative,.money-out{color:var(--red)}
-  .stat.profit{background:#f0faf5;border-color:#d6ede0}.stat.profit .stat-label{color:#347760}
-  .section-block{margin-top:24px;scroll-margin-top:18px}
-  .section-title{display:flex;justify-content:space-between;gap:12px;align-items:center;margin-bottom:11px}
-  .section-title h2{font-size:16px;letter-spacing:-.025em;margin:0;font-weight:780}
-  .section-title p{font-size:11px;color:var(--muted);margin:3px 0 0}
-  .table-card{background:#fff;border:1px solid var(--line);border-radius:12px;overflow:hidden}
-  .table-tools{display:flex;justify-content:space-between;gap:10px;padding:11px 13px;border-bottom:1px solid var(--line);align-items:center}
-  .search{position:relative;display:block;min-width:175px;max-width:300px;flex:1}
-  .search input{display:block;width:100%;height:35px;padding:7px 10px 7px 33px;border:1px solid #dfe5ee;border-radius:8px;background:#fff;font-size:12px;color:var(--ink)}
-  .search svg{position:absolute;width:14px;height:14px;left:11px;top:11px;stroke:#94a3b8}
-  .filters select{height:35px;border:1px solid #dfe5ee;border-radius:8px;background:white;color:#486077;padding:7px 11px;font-size:11px}
+  .stat.profit{background:linear-gradient(135deg,#20375d 0%,#152842 100%);border-color:#203452;box-shadow:0 12px 28px #1f33501f}
+  .stat.profit .stat-label{color:#bed0e3}.stat.profit .stat-number{color:#fff}.stat.profit .stat-number.negative{color:#ffb7be}.stat.profit .stat-foot{color:#9eb0c6}.stat.profit .stat-icon{color:#c5eece;background:#ffffff20}
+  .section-block{margin-top:34px;scroll-margin-top:105px}
+  .section-title{display:flex;justify-content:space-between;gap:18px;align-items:center;margin-bottom:16px}
+  .section-title h2{font:800 20px/1.35 var(--display);letter-spacing:-.04em;margin:0}
+  .section-title p{font-size:13px;color:#8190a2;margin:4px 0 0}
+  .table-card{background:white;border:1px solid #e3e9f1;border-radius:16px;overflow:hidden;box-shadow:0 6px 22px #213b5e07}
+  .table-tools{display:flex;justify-content:space-between;gap:12px;padding:15px 18px;border-bottom:1px solid #e9edf4;align-items:center}
+  .search{position:relative;display:block;min-width:190px;max-width:340px;flex:1}
+  .search input{display:block;width:100%;height:42px;padding:10px 13px 10px 39px;border:1px solid #e0e6ee;border-radius:10px;background:#fcfdff;font-size:13px;color:var(--ink);outline-offset:2px}
+  .search input:focus,.filters select:focus{border-color:#a5b5f4;background:#fff}
+  .search input::placeholder{color:#9aa8b9}
+  .search svg{position:absolute;width:17px;height:17px;left:13px;top:12px;stroke:#94a2b6}
+  .filters select{height:42px;border:1px solid #dfe5ee;border-radius:10px;background:#fcfdff;color:#4b617e;padding:8px 11px;font-size:12px;font-weight:700}
   .table-scroll{overflow-x:auto}
-  table{border-collapse:collapse;width:100%;white-space:nowrap}
-  th{background:#f8fafc;color:#687991;font-size:10px;letter-spacing:.015em;font-weight:750;padding:12px 13px;text-align:left}
-  td{padding:12px 13px;border-top:1px solid #edf0f4;font-size:11px;color:#46566b}
-  tbody tr:hover{background:#fafcff}
-  td strong{font-size:12px;font-weight:720;color:var(--ink);display:block}
-  td small{color:#7b8ba0;display:block;font-size:10px;max-width:235px;overflow:hidden;text-overflow:ellipsis}
-  .project-url{color:#185aab;text-decoration:underline;text-underline-offset:2px}
-  .amount{font-variant-numeric:tabular-nums;font-weight:750}
-  .tag{font-size:10px;font-weight:700;display:inline-block;border-radius:6px;padding:4px 7px}
-  .tag.completed,.tag.income{background:#e6f6ed;color:#0b8155}
-  .tag.progress{background:#eaf2ff;color:#3161a4}
-  .tag.hold{background:#fff4dc;color:#96650a}
-  .tag.expense{background:#fff0f0;color:#bc4247}
-  .row-actions{display:flex;align-items:center;gap:4px}
-  .action{border:1px solid transparent;background:transparent;color:#667e9c;border-radius:7px;display:inline-grid;place-items:center;padding:7px}
-  .action:hover{background:#eaf2ff;color:#205ab2}.action.delete:hover{background:#fff0f0;color:var(--red)}
-  .table-footer{border-top:1px solid var(--line);padding:9px 13px;color:#8291a4;font-size:10px}
-  .empty{text-align:center;padding:24px 15px;color:#8996a6;font-size:11px;white-space:normal}
-  .empty .symbol{font-size:19px;color:#9fb0c4}.empty b{display:block;color:#394e66;font-size:12px;margin:5px 0}
-  .empty p{margin:4px 0 10px}.empty .btn{font-size:11px}
-  .extras{display:grid;grid-template-columns:1fr 1fr;gap:12px;margin:26px 0 0}
-  details{background:white;border:1px solid var(--line);border-radius:12px;min-width:0}
-  details summary{cursor:pointer;list-style:none;padding:14px 16px;display:flex;align-items:center;justify-content:space-between;font-weight:750;font-size:12px}
+  .table-scroll:has(.empty) table{display:block;width:100%}
+  .table-scroll:has(.empty) thead{display:none}
+  .table-scroll:has(.empty) tbody,.table-scroll:has(.empty) tr,.table-scroll:has(.empty) td{display:block;width:100%;border:0}
+  table{border-collapse:collapse;width:100%;white-space:nowrap;font-variant-numeric:tabular-nums}
+  th{background:#f9fbfe;color:#65758b;font-size:11px;letter-spacing:.035em;text-transform:uppercase;font-weight:800;padding:15px 16px;text-align:left}
+  td{padding:17px 16px;border-top:1px solid #edf1f5;font-size:13px;color:#53647d}
+  tbody tr:hover{background:#fbfcff}
+  td strong{font-size:13px;font-weight:800;color:#24334d;display:block;line-height:1.4}
+  td small{color:#96a2b2;display:block;font-size:11px;max-width:250px;overflow:hidden;text-overflow:ellipsis;margin-top:3px}
+  .project-url{color:#3457e2;text-decoration:underline;text-decoration-color:#b6c5fc;text-underline-offset:3px}
+  .amount{font-weight:800;letter-spacing:-.02em}
+  .tag{font-size:11px;font-weight:800;display:inline-flex;align-items:center;border-radius:7px;padding:5px 9px;line-height:1.4;white-space:nowrap}
+  .tag.completed,.tag.income{background:#e8f8f1;color:#0b8b67}
+  .tag.progress{background:#edf1ff;color:#3c5fd0}
+  .tag.hold{background:#fff4dd;color:#a97618}
+  .tag.expense{background:#fff0f0;color:#c84c59}
+  .row-actions{display:flex;align-items:center;gap:6px}
+  .action{border:1px solid #e8edf4;background:white;color:#71829c;border-radius:9px;display:inline-grid;place-items:center;padding:8px}
+  .action:hover{background:#eef3ff;color:#3557cd;border-color:#d5def5}.action.delete:hover{background:#fff0f0;color:var(--red);border-color:#ffe0e3}
+  .table-footer{border-top:1px solid #edf1f5;padding:12px 18px;color:#9ba8b8;font-size:11px}
+  .empty{text-align:center;padding:38px 15px 42px;color:#75859d;font-size:13px;white-space:normal}
+  .empty .symbol{font-size:27px;color:#7892be;background:#f0f4fc;width:56px;height:56px;border-radius:17px;margin:0 auto 13px;display:grid;place-items:center}
+  .empty b{display:block;color:#293b58;font-size:15px;font-weight:800;margin:5px 0}
+  .empty p{margin:6px 0 16px}.empty .btn{font-size:12px;min-height:38px;padding:9px 15px}
+  .extras{display:grid;grid-template-columns:1fr 1fr;gap:15px;margin:30px 0 0}
+  details{background:white;border:1px solid #e3e9f1;border-radius:15px;min-width:0;box-shadow:0 3px 15px #213b5e05}
+  details summary{cursor:pointer;list-style:none;padding:18px 20px;display:flex;align-items:center;justify-content:space-between;font-weight:800;font-size:14px;color:#283b55}
   details summary::-webkit-details-marker{display:none}
-  details summary:after{content:'+';color:#8293a6;font-size:20px;font-weight:400;line-height:16px}
+  details summary:after{content:'+';color:#8293ad;font-size:24px;font-weight:400;line-height:18px}
   details[open] summary:after{content:'−'}
-  .details-content{border-top:1px solid var(--line);padding:13px 16px 17px}
-  .details-content p{font-size:11px;color:#7b899c;margin:0 0 12px}
-  .backup-actions{display:flex;flex-wrap:wrap;gap:8px}
-  .legend{font-size:10px;color:#748398;display:flex;gap:11px;margin:5px 0 13px}
-  .legend i{display:inline-block;width:9px;height:9px;background:#2665b6;border-radius:2px;margin-right:4px}
+  .details-content{border-top:1px solid #eef1f5;padding:19px 20px 21px}
+  .details-content p{font-size:13px;color:#7b899e;margin:0 0 16px}
+  .backup-actions{display:flex;flex-wrap:wrap;gap:9px}
+  .legend{font-size:12px;color:#748398;display:flex;gap:14px;margin:5px 0 15px}
+  .legend i{display:inline-block;width:10px;height:10px;background:#3457e2;border-radius:3px;margin-right:5px}
   .legend i.expense{background:#f0ad6e}
-  .chart-empty{padding:18px;text-align:center;border:1px dashed #e5eaf0;border-radius:8px;color:#8b99a8;font-size:11px}
-  .chart{height:165px;display:grid;grid-template-columns:repeat(6,1fr);align-items:end;gap:10px}
+  .chart-empty{padding:24px;text-align:center;border:1px dashed #e5eaf0;border-radius:10px;color:#8b99a8;font-size:12px}
+  .chart{height:200px;display:grid;grid-template-columns:repeat(6,1fr);align-items:end;gap:10px}
   .chart-col{height:100%;display:flex;flex-direction:column;justify-content:flex-end;align-items:center}
-  .chart-bars{height:calc(100% - 20px);display:flex;align-items:end;justify-content:center;gap:4px;width:100%;border-bottom:1px solid var(--line)}
-  .chart-bar{width:28%;max-width:24px;min-width:5px;min-height:2px;border-radius:4px 4px 0 0}
-  .chart-bar.income{background:#2665b6}.chart-bar.expense{background:#f0ad6e}
-  .chart-month{font-size:10px;color:#8997a8;margin-top:5px}
-  .foot{font-size:10px;color:#8090a1;display:flex;justify-content:space-between;gap:12px;margin-top:28px;flex-wrap:wrap}
-  .foot a{color:#205ab2;font-weight:750}
-  dialog{border:0;border-radius:14px;box-shadow:0 22px 65px #1724394f;padding:0;width:min(96vw,560px);max-height:91vh;overflow:auto;color:var(--ink)}
-  dialog::backdrop{background:rgba(18,33,54,.54);backdrop-filter:blur(2px)}
-  .modal-header{display:flex;justify-content:space-between;align-items:center;padding:17px 22px;border-bottom:1px solid var(--line)}
-  .modal-header h3{margin:0;font-size:16px}
-  .close{background:#f1f5fa;border:0;border-radius:8px;font-size:21px;width:31px;height:31px;color:#60748a;line-height:1}
-  .modal-body{padding:21px 22px}.form-grid{display:grid;grid-template-columns:1fr 1fr;gap:14px}
-  .field{display:grid;gap:5px}.field.full{grid-column:1/-1}
-  .field label{font-size:11px;font-weight:720;color:#40566f}
-  .field input,.field select,.field textarea{width:100%;border:1px solid #dce4ef;border-radius:8px;padding:10px 11px;background:white;color:var(--ink);font-size:12px}
-  .field textarea{resize:vertical;min-height:75px}.field .hint{font-size:10px;color:#8b9aad}
-  .modal-footer{display:flex;justify-content:flex-end;gap:8px;border-top:1px solid var(--line);padding:14px 22px}
-  .notice{background:#f0f7ff;border:1px solid #d8e7fa;color:#47688c;border-radius:8px;padding:10px 11px;font-size:11px}
-  .toast{position:fixed;bottom:18px;right:18px;background:#1d3550;color:white;padding:11px 14px;border-radius:9px;box-shadow:0 12px 30px #17243930;z-index:1000;opacity:0;transform:translateY(10px);transition:.18s;pointer-events:none;max-width:320px;font-size:12px}
+  .chart-bars{height:calc(100% - 24px);display:flex;align-items:end;justify-content:center;gap:4px;width:100%;border-bottom:1px solid var(--line)}
+  .chart-bar{width:28%;max-width:24px;min-width:5px;min-height:2px;border-radius:5px 5px 0 0}
+  .chart-bar.income{background:#3457e2}.chart-bar.expense{background:#f0ad6e}
+  .chart-month{font-size:11px;color:#8997a8;margin-top:6px}
+  .foot{font-size:12px;color:#94a0b1;display:flex;justify-content:space-between;gap:14px;margin-top:31px;flex-wrap:wrap;padding-top:20px;border-top:1px solid #e8edf3}
+  .foot a{color:#3457e2;font-weight:800}
+  dialog{border:1px solid #e1e6ee;border-radius:18px;box-shadow:0 28px 80px #14253a45;padding:0;width:min(96vw,590px);max-height:91vh;overflow:auto;color:var(--ink);font-family:var(--font)}
+  dialog::backdrop{background:rgba(13,24,43,.54);backdrop-filter:blur(4px)}
+  .modal-header{display:flex;justify-content:space-between;align-items:center;padding:21px 26px;border-bottom:1px solid var(--line)}
+  .modal-header h3{margin:0;font:800 19px/1.3 var(--display);letter-spacing:-.035em}
+  .close{background:#f2f4f8;border:0;border-radius:10px;font-size:24px;width:36px;height:36px;color:#687a91;line-height:1}
+  .modal-body{padding:24px 26px}.form-grid{display:grid;grid-template-columns:1fr 1fr;gap:18px}
+  .field{display:grid;gap:7px}.field.full{grid-column:1/-1}
+  .field label{font-size:12px;font-weight:800;color:#3f516b}
+  .field input,.field select,.field textarea{width:100%;border:1px solid #dce4ef;border-radius:10px;padding:12px 13px;background:white;color:var(--ink);font-size:13px;outline-offset:2px}
+  .field textarea{resize:vertical;min-height:85px}.field .hint{font-size:11px;color:#8b9aad}
+  .modal-footer{display:flex;justify-content:flex-end;gap:9px;border-top:1px solid var(--line);padding:16px 26px;background:#fafbfd}
+  .notice{background:#f1f5ff;border:1px solid #dfe7fd;color:#4b6189;border-radius:10px;padding:12px 14px;font-size:12px}
+  .toast{position:fixed;bottom:20px;right:20px;background:#192a46;color:white;padding:13px 17px;border-radius:11px;box-shadow:0 12px 34px #17243930;z-index:1000;opacity:0;transform:translateY(10px);transition:.18s;pointer-events:none;max-width:340px;font-size:13px}
   .toast.show{opacity:1;transform:translateY(0)}
-  @media(max-width:1100px){.stats{grid-template-columns:repeat(3,1fr)}.nav{margin-left:10px}}
-  @media(max-width:690px){.header-inner{padding:11px 15px;flex-wrap:wrap;gap:9px}.brand{margin-right:auto}.header-status{font-size:10px}.nav{width:100%;order:3;margin:0;gap:3px;overflow:auto}.nav a{padding:7px 10px}.main{padding:20px 14px 34px}.intro{align-items:flex-start;flex-direction:column;gap:13px;margin-bottom:18px}.intro h1{font-size:26px}.top-actions{width:100%}.top-actions .btn{flex:1}.stats{grid-template-columns:repeat(2,minmax(0,1fr));gap:8px;margin-bottom:21px}.stat{padding:15px 12px}.stat:last-child{grid-column:1/-1}.stat-number{font-size:23px}.section-block{margin-top:20px}.extras{grid-template-columns:1fr}.section-title{align-items:end}.section-title h2{font-size:16px}.table-tools{gap:6px}.search{min-width:0}.filters select{max-width:130px}.form-grid{grid-template-columns:1fr}.field.full{grid-column:auto}.modal-body,.modal-header,.modal-footer{padding-left:16px;padding-right:16px}}
+  @media(max-width:1180px){.stats{grid-template-columns:repeat(3,minmax(0,1fr))}.header-inner{gap:20px}.nav{margin-left:0}.brand{min-width:0}}
+  @media(max-width:880px){.header-status{display:none}.main{padding:33px 24px}.intro{align-items:flex-start}.top-actions{justify-content:flex-end}.nav a{padding:9px 12px}}
+  @media(max-width:690px){html{scroll-padding-top:112px}.header-inner{min-height:0;padding:12px 17px 8px;flex-wrap:wrap;gap:10px}.brand{margin-right:auto}.mark{width:38px;height:38px}.brand-title{font-size:14px}.header-status{display:inline-flex;font-size:10px}.nav{width:100%;order:3;margin:0;gap:4px;overflow-x:auto;padding-bottom:7px}.nav a{padding:8px 11px;font-size:12px}.main{padding:26px 16px 32px}.intro{align-items:flex-start;flex-direction:column;gap:18px;margin-bottom:22px}.intro h1{font-size:29px}.intro p.desc{font-size:13px;line-height:1.6}.top-actions{width:100%;gap:9px}.top-actions .btn{flex:1;padding-left:10px;padding-right:10px;font-size:12px}.stats{grid-template-columns:repeat(2,minmax(0,1fr));gap:10px;margin-bottom:26px}.stat{padding:18px 15px 17px;min-height:145px}.stat:last-child{grid-column:1/-1;min-height:132px}.stat-number{font-size:23px;margin-top:21px}.stat-label{font-size:12px}.stat-icon{top:15px;right:12px;width:29px;height:29px}.stat-icon svg{width:15px;height:15px}.stat-foot{font-size:10px}.section-block{margin-top:27px;scroll-margin-top:115px}.extras{grid-template-columns:1fr;gap:12px}.section-title h2{font-size:18px}.section-title p{font-size:12px}.section-title .btn{padding:9px 12px;font-size:12px;min-height:39px}.table-tools{gap:8px;padding:11px}.search{min-width:0}.filters select{max-width:130px}.form-grid{grid-template-columns:1fr}.field.full{grid-column:auto}.modal-body,.modal-header,.modal-footer{padding-left:18px;padding-right:18px}th{padding:12px 13px}td{padding:14px 13px}.empty{padding:27px 10px}.foot{font-size:11px}}
   @media(prefers-reduced-motion:reduce){*,*::before,*::after{scroll-behavior:auto!important;transition:none!important}}
+
   </style>
 </head>
 <body>
@@ -136,18 +157,18 @@
   <header class="site-header">
     <div class="header-inner">
       <a class="brand" href="#overview"><span class="mark">SK</span><span><span class="brand-title">Project Tracker</span><span class="brand-sub">SAQIB KAKAR</span></span></a>
-      <nav class="nav" aria-label="Navigation"><a href="#overview" class="active">Overview</a><a href="#projects">Projects</a><a href="#transactions">Transactions</a><a href="#backups">Backup</a></nav>
-      <span class="header-status">Saved in this browser</span>
+      <nav class="nav" aria-label="Main navigation"><a href="#overview" class="active">Overview</a><a href="#projects">Projects</a><a href="#transactions">Transactions</a><a href="#backups">Backup</a></nav>
+      <span class="header-status">Saved on this device</span>
     </div>
   </header>
   <main class="main" id="overview">
-    <section class="intro"><div><div class="eyebrow">YOUR BUSINESS AT A GLANCE</div><h1>Projects &amp; Earnings</h1><p class="desc">Track your client work, payments, expenses and profit. All amounts in PKR.</p></div><div class="top-actions"><button class="btn primary" type="button" data-open="project"><svg fill="none" stroke="currentColor" stroke-width="2"><use href="#ic-plus"/></svg> New project</button><button class="btn light" type="button" data-open="entry"><svg fill="none" stroke="currentColor" stroke-width="2"><use href="#ic-plus"/></svg> Income / expense</button></div></section>
+    <section class="intro"><div><div class="eyebrow">YOUR WORKSPACE</div><h1>Projects &amp; income</h1><p class="desc">A clear overview of your projects, payments and profit — all in PKR.</p></div><div class="top-actions"><button class="btn primary" type="button" data-open="project"><svg fill="none" stroke="currentColor" stroke-width="2"><use href="#ic-plus"/></svg> New project</button><button class="btn light" type="button" data-open="entry"><svg fill="none" stroke="currentColor" stroke-width="2"><use href="#ic-plus"/></svg> Income / expense</button></div></section>
     <section class="stats" aria-label="Financial summary">
-      <article class="stat"><div class="stat-label">Total projects</div><div class="stat-number" id="statProjects">0</div><div class="stat-foot"><strong id="statCompleted">0</strong> completed</div></article>
-      <article class="stat"><div class="stat-label">Income received</div><div class="stat-number" id="statIncome">Rs 0</div><div class="stat-foot">Payments collected</div></article>
-      <article class="stat"><div class="stat-label">Total expenses</div><div class="stat-number" id="statExpenses">Rs 0</div><div class="stat-foot">Money spent</div></article>
-      <article class="stat profit"><div class="stat-label">Net cash profit</div><div class="stat-number" id="statProfit">Rs 0</div><div class="stat-foot">Income minus expenses</div></article>
-      <article class="stat"><div class="stat-label">Pending payments</div><div class="stat-number" id="statPending">Rs 0</div><div class="stat-foot">Still owed by clients</div></article>
+      <article class="stat"><div class="stat-label">Total projects</div><div class="stat-icon" aria-hidden="true"><svg><use href="#ic-folder"/></svg></div><div class="stat-number" id="statProjects">0</div><div class="stat-foot"><strong id="statCompleted">0</strong> completed</div></article>
+      <article class="stat"><div class="stat-label">Income received</div><div class="stat-icon" aria-hidden="true"><svg><use href="#ic-wallet"/></svg></div><div class="stat-number" id="statIncome">Rs 0</div><div class="stat-foot">Payments collected</div></article>
+      <article class="stat"><div class="stat-label">Total expenses</div><div class="stat-icon" aria-hidden="true"><svg><use href="#ic-receipt"/></svg></div><div class="stat-number" id="statExpenses">Rs 0</div><div class="stat-foot">Money spent</div></article>
+      <article class="stat profit"><div class="stat-label">Net cash profit</div><div class="stat-icon" aria-hidden="true"><svg><use href="#ic-chart"/></svg></div><div class="stat-number" id="statProfit">Rs 0</div><div class="stat-foot">Income minus expenses</div></article>
+      <article class="stat"><div class="stat-label">Pending payments</div><div class="stat-icon" aria-hidden="true"><svg><use href="#ic-clock"/></svg></div><div class="stat-number" id="statPending">Rs 0</div><div class="stat-foot">Still owed by clients</div></article>
     </section>
     <section class="section-block" id="projects">
       <div class="section-title"><div><h2>Projects</h2><p>Manage each project and its earnings.</p></div><button class="btn primary" type="button" data-open="project">+ Add project</button></div>
@@ -190,8 +211,8 @@
     function projectSums(id){const entries=data.entries.filter(e=>e.projectId===id);return {income:entries.filter(e=>e.type==='income').reduce((a,e)=>a+e.amount,0),expenses:entries.filter(e=>e.type==='expense').reduce((a,e)=>a+e.amount,0)}}
     function renderStats(){const a=aggregates();el('statProjects').textContent=data.projects.length;el('statCompleted').textContent=data.projects.filter(p=>p.status==='Completed').length;el('statIncome').textContent=money(a.income);el('statExpenses').textContent=money(a.expenses);el('statPending').textContent=money(a.pending);const profit=el('statProfit');profit.textContent=money(a.profit);profit.className='stat-number '+(a.profit<0?'negative':a.profit>0?'positive':'')}
     function renderChart(){const d=new Date(),months=Array.from({length:6},(_,i)=>{const dt=new Date(d.getFullYear(),d.getMonth()-5+i,1);return {key:dt.getFullYear()+'-'+String(dt.getMonth()+1).padStart(2,'0'),label:dt.toLocaleString('en',{month:'short'}),income:0,expense:0}});for(const e of data.entries){const month=months.find(m=>e.date.startsWith(m.key));if(month)month[e.type]+=e.amount}const max=Math.max(0,...months.flatMap(m=>[m.income,m.expense]));el('chart').innerHTML=!max?'<div class="chart-empty">Add income or expense entries to see monthly cash flow here.</div>':`<div class="chart">${months.map(m=>`<div class="chart-col"><div class="chart-bars"><div class="chart-bar income" style="height:${Math.max(2,m.income/max*100)}%" title="${safe(m.label)} income: ${safe(money(m.income))}" role="img" aria-label="${safe(m.label)} income: ${safe(money(m.income))}"></div><div class="chart-bar expense" style="height:${Math.max(2,m.expense/max*100)}%" title="${safe(m.label)} expenses: ${safe(money(m.expense))}" role="img" aria-label="${safe(m.label)} expenses: ${safe(money(m.expense))}"></div></div><div class="chart-month">${safe(m.label)}</div></div>`).join('')}</div>`}
-    function renderProjects(){const q=el('projectSearch').value.trim().toLowerCase(),status=el('projectStatus').value;const all=data.projects.filter(p=>(status==='all'||p.status===status)&&(!q||[p.name,p.client,p.notes].join(' ').toLowerCase().includes(q))).sort((a,b)=>(b.date||'').localeCompare(a.date||'')||a.name.localeCompare(b.name));el('projectRows').innerHTML=all.length?all.map(p=>{const a=projectSums(p.id),pending=Math.max(0,p.fee-a.income),profit=a.income-a.expenses,st=p.status==='Completed'?'completed':p.status==='On hold'?'hold':'progress';const validUrl=/^https?:\/\//i.test(p.url);return `<tr><td><strong>${validUrl?`<a href="${safe(p.url)}" target="_blank" rel="noopener noreferrer" class="project-url">${safe(p.name)}</a>`:safe(p.name)}</strong><small>${safe(p.client||'No client')} · ${safe(dateDisplay(p.date))}</small></td><td><span class="tag ${st}">${safe(p.status)}</span></td><td class="amount">${safe(money(p.fee))}</td><td class="amount money-in">${safe(money(a.income))}</td><td class="amount money-out">${safe(money(a.expenses))}</td><td class="amount" style="color:${profit<0?'#cf3d49':'#07805d'}">${safe(money(profit))}</td><td class="amount">${safe(money(pending))}</td><td><div class="row-actions"><button type="button" class="action" data-edit-project="${safe(p.id)}" aria-label="Edit ${safe(p.name)}" title="Edit project">${icon('pen')}</button><button type="button" class="action delete" data-delete-project="${safe(p.id)}" aria-label="Delete ${safe(p.name)}" title="Delete project">${icon('trash')}</button></div></td></tr>`}).join(''):`<tr><td colspan="8"><div class="empty"><div class="symbol">▦</div><b>${data.projects.length?'No matching projects':'No projects added yet'}</b><p>${data.projects.length?'Try a different search or status filter.':'Use Add project to begin.'}</p>${!data.projects.length?'<button class="btn primary" type="button" data-open="project">+ Add first project</button>':''}</div></td></tr>`;el('projectFooter').textContent=`Showing ${all.length} of ${data.projects.length} projects`}
-    function renderEntries(){const q=el('entrySearch').value.trim().toLowerCase(),type=el('entryType').value;const projects=new Map(data.projects.map(p=>[p.id,p.name]));const all=data.entries.filter(e=>(type==='all'||e.type===type)&&(!q||[e.note,projects.get(e.projectId)||'General'].join(' ').toLowerCase().includes(q))).sort((a,b)=>b.date.localeCompare(a.date)||b.id.localeCompare(a.id));el('entryRows').innerHTML=all.length?all.map(e=>`<tr><td>${safe(dateDisplay(e.date))}</td><td><span class="tag ${safe(e.type)}">${e.type==='income'?'↙ Income':'↗ Expense'}</span></td><td><strong>${safe(projects.get(e.projectId)||'General business')}</strong></td><td><small style="max-width:280px">${safe(e.note||'—')}</small></td><td class="amount ${e.type==='income'?'money-in':'money-out'}">${e.type==='income'?'+':'−'} ${safe(money(e.amount))}</td><td><div class="row-actions"><button type="button" class="action" data-edit-entry="${safe(e.id)}" aria-label="Edit entry" title="Edit entry">${icon('pen')}</button><button type="button" class="action delete" data-delete-entry="${safe(e.id)}" aria-label="Delete entry" title="Delete entry">${icon('trash')}</button></div></td></tr>`).join(''):`<tr><td colspan="6"><div class="empty"><div class="symbol">₨</div><b>${data.entries.length?'No matching entries':'No income or expenses recorded'}</b><p>${data.entries.length?'Try a different filter.':'Use Add entry to begin.'}</p>${!data.entries.length?'<button class="btn primary" type="button" data-open="entry">+ Add first entry</button>':''}</div></td></tr>`;el('entryFooter').textContent=`Showing ${all.length} of ${data.entries.length} entries`}
+    function renderProjects(){const q=el('projectSearch').value.trim().toLowerCase(),status=el('projectStatus').value;const all=data.projects.filter(p=>(status==='all'||p.status===status)&&(!q||[p.name,p.client,p.notes].join(' ').toLowerCase().includes(q))).sort((a,b)=>(b.date||'').localeCompare(a.date||'')||a.name.localeCompare(b.name));el('projectRows').innerHTML=all.length?all.map(p=>{const a=projectSums(p.id),pending=Math.max(0,p.fee-a.income),profit=a.income-a.expenses,st=p.status==='Completed'?'completed':p.status==='On hold'?'hold':'progress';const validUrl=/^https?:\/\//i.test(p.url);return `<tr><td><strong>${validUrl?`<a href="${safe(p.url)}" target="_blank" rel="noopener noreferrer" class="project-url">${safe(p.name)}</a>`:safe(p.name)}</strong><small>${safe(p.client||'No client')} · ${safe(dateDisplay(p.date))}</small></td><td><span class="tag ${st}">${safe(p.status)}</span></td><td class="amount">${safe(money(p.fee))}</td><td class="amount money-in">${safe(money(a.income))}</td><td class="amount money-out">${safe(money(a.expenses))}</td><td class="amount" style="color:${profit<0?'#cf3d49':'#07805d'}">${safe(money(profit))}</td><td class="amount">${safe(money(pending))}</td><td><div class="row-actions"><button type="button" class="action" data-edit-project="${safe(p.id)}" aria-label="Edit ${safe(p.name)}" title="Edit project">${icon('pen')}</button><button type="button" class="action delete" data-delete-project="${safe(p.id)}" aria-label="Delete ${safe(p.name)}" title="Delete project">${icon('trash')}</button></div></td></tr>`}).join(''):`<tr><td colspan="8"><div class="empty"><div class="symbol"><svg fill="none" stroke="currentColor" stroke-width="1.5" width="25" height="25" viewBox="0 0 24 24"><use href="#ic-folder"/></svg></div><b>${data.projects.length?'No matching projects':'No projects added yet'}</b><p>${data.projects.length?'Try a different search or status filter.':'Use Add project to begin.'}</p>${!data.projects.length?'<button class="btn primary" type="button" data-open="project">+ Add first project</button>':''}</div></td></tr>`;el('projectFooter').textContent=`Showing ${all.length} of ${data.projects.length} projects`}
+    function renderEntries(){const q=el('entrySearch').value.trim().toLowerCase(),type=el('entryType').value;const projects=new Map(data.projects.map(p=>[p.id,p.name]));const all=data.entries.filter(e=>(type==='all'||e.type===type)&&(!q||[e.note,projects.get(e.projectId)||'General'].join(' ').toLowerCase().includes(q))).sort((a,b)=>b.date.localeCompare(a.date)||b.id.localeCompare(a.id));el('entryRows').innerHTML=all.length?all.map(e=>`<tr><td>${safe(dateDisplay(e.date))}</td><td><span class="tag ${safe(e.type)}">${e.type==='income'?'↙ Income':'↗ Expense'}</span></td><td><strong>${safe(projects.get(e.projectId)||'General business')}</strong></td><td><small style="max-width:280px">${safe(e.note||'—')}</small></td><td class="amount ${e.type==='income'?'money-in':'money-out'}">${e.type==='income'?'+':'−'} ${safe(money(e.amount))}</td><td><div class="row-actions"><button type="button" class="action" data-edit-entry="${safe(e.id)}" aria-label="Edit entry" title="Edit entry">${icon('pen')}</button><button type="button" class="action delete" data-delete-entry="${safe(e.id)}" aria-label="Delete entry" title="Delete entry">${icon('trash')}</button></div></td></tr>`).join(''):`<tr><td colspan="6"><div class="empty"><div class="symbol"><svg fill="none" stroke="currentColor" stroke-width="1.5" width="25" height="25" viewBox="0 0 24 24"><use href="#ic-wallet"/></svg></div><b>${data.entries.length?'No matching entries':'No income or expenses recorded'}</b><p>${data.entries.length?'Try a different filter.':'Use Add entry to begin.'}</p>${!data.entries.length?'<button class="btn primary" type="button" data-open="entry">+ Add first entry</button>':''}</div></td></tr>`;el('entryFooter').textContent=`Showing ${all.length} of ${data.entries.length} entries`}
     function render(){renderStats();renderChart();renderProjects();renderEntries();el('year').textContent=new Date().getFullYear()}
     function openProject(id){el('projectForm').reset();el('pId').value='';el('pDate').value=today();el('projectHeading').textContent='Add project';if(id){const p=data.projects.find(x=>x.id===id);if(!p)return;for(const k of ['name','client','status','fee','date','url','notes'])el('projectForm').elements[k].value=p[k]??'';el('pId').value=id;el('projectHeading').textContent='Edit project'}el('projectDialog').showModal();el('pName').focus()}
     function openEntry(id){el('entryForm').reset();el('eId').value='';el('eDate').value=today();el('entryHeading').textContent='Add income / expense';el('eProject').innerHTML='<option value="">General / not linked to a project</option>'+data.projects.map(p=>`<option value="${safe(p.id)}">${safe(p.name)}</option>`).join('');if(id){const e=data.entries.find(x=>x.id===id);if(!e)return;for(const k of ['type','amount','projectId','date','note'])el('entryForm').elements[k].value=e[k]??'';el('eId').value=id;el('entryHeading').textContent='Edit income / expense'}el('entryDialog').showModal();el('eAmount').focus()}
