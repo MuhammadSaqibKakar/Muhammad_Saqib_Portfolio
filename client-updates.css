@@ -155,3 +155,7 @@ body { background: radial-gradient(circle at 95% 3%,rgba(77,143,242,.19),transpa
 .privacy-content h2:not(:first-child){margin-top:28px;}
 .privacy-content p{margin:0;color:#435b79;line-height:1.8;font-size:.95rem;}
 .privacy-content a{color:#1553a1;text-decoration:underline;}
+
+/* Make the last homepage social icon immediately recognizable as WhatsApp. */
+.hero-icons .whatsapp-link{background:#128c7e;border-color:#128c7e}
+.hero-icons .whatsapp-link:hover,.hero-icons .whatsapp-link:focus-visible{background:#075e54;border-color:#075e54}
