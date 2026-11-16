@@ -333,3 +333,63 @@ a:focus-visible,button:focus-visible{outline:3px solid #ff8c32;outline-offset:4p
   .hero-social-rail .rail-link { width: 40px; height: 40px; flex-basis: 40px; }
   .hero-social-rail svg { width: 21px; height: 21px; }
 }
+
+
+/* Ensure every desktop navigation label stays entirely within the white panel.
+   On narrower laptops, use the existing accessible Menu dropdown instead of
+   allowing Projects to overlap the orange/white split. */
+@media (min-width: 1381px) {
+  .site-header .nav-list {
+    gap: clamp(12px, 1.15vw, 19px);
+  }
+  .site-header .header-contact {
+    margin-left: 0;
+  }
+}
+@media (min-width: 821px) and (max-width: 1380px) {
+  .site-header {
+    gap: 14px;
+  }
+  .site-header .menu-toggle {
+    display: block;
+    order: 3;
+    border: 1px solid #eee1d6;
+    background: #fff;
+    color: #251c18;
+    border-radius: 9px;
+    padding: 8px 13px;
+    font-weight: 850;
+    font-size: .8rem;
+  }
+  .site-header .nav-list {
+    display: none;
+    position: absolute;
+    top: 64px;
+    right: 0;
+    left: auto;
+    width: min(330px, calc(100vw - 64px));
+    flex-direction: column;
+    align-items: stretch;
+    gap: 0;
+    margin: 0;
+    padding: 12px;
+    background: #fffdfa;
+    border: 1px solid #eadccd;
+    border-radius: 15px;
+    box-shadow: 0 18px 40px rgba(41, 26, 13, .14);
+    z-index: 50;
+  }
+  .site-header .nav-list.is-open { display: flex; }
+  .site-header .nav-list a {
+    display: block;
+    padding: 11px 12px;
+    border-radius: 8px;
+    color: #2c2724;
+    font-size: .88rem;
+  }
+  .site-header .nav-list a:hover,
+  .site-header .nav-list a:focus-visible { background: #fff0e4; }
+  .site-header .header-contact {
+    margin-left: auto;
+  }
+}
