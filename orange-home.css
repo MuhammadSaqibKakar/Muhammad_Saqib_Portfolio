@@ -691,3 +691,51 @@ a:focus-visible,button:focus-visible{outline:3px solid #ff8c32;outline-offset:4p
   #work .selected-project-links{gap:16px;margin-top:22px}
   #work .selected-bottom{align-items:flex-start;flex-direction:column;gap:12px}
 }
+
+
+/* Selected Work: consistent editorial alignment for the four projects below
+   Haji Baba. Preserve the featured perfume showcase exactly as it is. */
+@media (min-width: 981px) {
+  #work .selected-project {
+    grid-template-columns: minmax(0, .92fr) minmax(0, 1.08fr);
+  }
+  #work .selected-project .selected-project-info,
+  #work .selected-project:nth-child(even) .selected-project-info {
+    order: 1;
+  }
+  #work .selected-project .selected-project-visual,
+  #work .selected-project:nth-child(even) .selected-project-visual {
+    order: 2;
+  }
+}
+#work .selected-project-visual::before {
+  display: none;
+}
+#work .selected-project .selected-browser,
+#work .selected-project:nth-child(even) .selected-browser {
+  transform: none;
+  width: 100%;
+  max-width: 640px;
+}
+#work .selected-project .selected-project-visual:hover .selected-browser,
+#work .selected-project .selected-project-visual:focus-visible .selected-browser {
+  transform: translateY(-3px);
+}
+#work .selected-project .selected-browser > img {
+  object-fit: contain;
+  object-position: top center;
+}
+@media (max-width: 980px) {
+  #work .selected-project,
+  #work .selected-project:nth-child(even) {
+    grid-template-columns: 1fr;
+  }
+  #work .selected-project .selected-project-visual,
+  #work .selected-project:nth-child(even) .selected-project-visual {
+    order: 1;
+  }
+  #work .selected-project .selected-project-info,
+  #work .selected-project:nth-child(even) .selected-project-info {
+    order: 2;
+  }
+}
