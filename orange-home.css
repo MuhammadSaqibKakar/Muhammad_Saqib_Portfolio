@@ -312,10 +312,11 @@ a:focus-visible,button:focus-visible{outline:3px solid #ff8c32;outline-offset:4p
 /* Fit the entire desktop hero inside one browser viewport; the rest of the
    portfolio still scrolls normally. Keep mobile's stacked layout intact. */
 @media (min-width: 821px) {
-  .splash { padding-top: clamp(12px, 2.7vh, 28px); }
+  /* Keep a slim margin at the bottom while allowing the full hero to fill the viewport. */
+  .splash { padding-top: clamp(10px, 2vh, 20px); }
   .splash-shell {
-    height: clamp(620px, calc(100vh - 115px), 900px);
-    height: clamp(620px, calc(100dvh - 115px), 900px);
+    height: clamp(620px, calc(100vh - 48px), 980px);
+    height: clamp(620px, calc(100dvh - 48px), 980px);
     min-height: 0;
   }
 }
