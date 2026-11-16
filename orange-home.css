@@ -458,7 +458,7 @@ a:focus-visible,button:focus-visible{outline:3px solid #ff8c32;outline-offset:4p
 }
 #work .selected-feature-art img{
   width:100%;height:100%;min-height:495px;
-  object-fit:cover;object-position:center;
+  object-fit:contain;object-position:center;
   transition:transform .6s cubic-bezier(.22,.61,.36,1);
 }
 #work .selected-feature-art:hover img{transform:scale(1.045)}
@@ -646,7 +646,7 @@ a:focus-visible,button:focus-visible{outline:3px solid #ff8c32;outline-offset:4p
 #work .selected-bottom>a:hover{color:#702a0c}
 @media(max-width:980px){
   #work .selected-feature{grid-template-columns:1fr;min-height:0}
-  #work .selected-feature-art img{height:380px;min-height:0;object-fit:cover}
+  #work .selected-feature-art img{height:380px;min-height:0;object-fit:contain}
   #work .selected-feature-copy{padding:40px}
   #work .selected-feature-copy h3{font-size:clamp(2.25rem,5vw,3.45rem)}
   #work .selected-project{grid-template-columns:1fr;min-height:0}
