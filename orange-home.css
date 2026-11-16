@@ -307,3 +307,28 @@ a:focus-visible,button:focus-visible{outline:3px solid #ff8c32;outline-offset:4p
   .hero-social-rail svg{width:19px;height:19px}
   .splash-shell .right-credential{padding:13px 15px}
 }
+
+
+/* Fit the entire desktop hero inside one browser viewport; the rest of the
+   portfolio still scrolls normally. Keep mobile's stacked layout intact. */
+@media (min-width: 821px) {
+  .splash { padding-top: clamp(12px, 2.7vh, 28px); }
+  .splash-shell {
+    height: clamp(620px, calc(100vh - 115px), 900px);
+    height: clamp(620px, calc(100dvh - 115px), 900px);
+    min-height: 0;
+  }
+}
+/* On lower laptop viewports, scale hero elements with the available height
+   to avoid the credential card and description colliding. */
+@media (min-width: 821px) and (max-height: 780px) {
+  .splash-orange .hero-word { top: 27%; font-size: clamp(6rem, 9vw, 8.4rem); }
+  .splash-orange .orange-intro { top: 54%; }
+  .splash-shell .right-copy { top: 26%; }
+  .splash-shell .right-copy h2 { font-size: clamp(1.95rem, 3vw, 2.65rem); margin: 11px 0; }
+  .splash-shell .right-copy p { font-size: .78rem; line-height: 1.6; }
+  .splash-shell .right-credential { bottom: 6.5%; padding: 15px 18px; }
+  .hero-social-rail { top: 25%; gap: 9px; }
+  .hero-social-rail .rail-link { width: 40px; height: 40px; flex-basis: 40px; }
+  .hero-social-rail svg { width: 21px; height: 21px; }
+}
