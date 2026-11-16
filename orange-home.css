@@ -786,3 +786,28 @@ a:focus-visible,button:focus-visible{outline:3px solid #ff8c32;outline-offset:4p
     max-width: 44%;
   }
 }
+
+/* Second full-width client feature, following the perfume showcase.
+   Maintain the existing layout with Bukhari's distinct black, wine and gold. */
+#work .selected-feature-giftshop {
+  margin-top: clamp(20px, 3vw, 34px);
+  background: #100c11;
+  border-color: #3a2726;
+  box-shadow: 0 30px 65px rgba(54, 23, 25, .15);
+}
+#work .selected-feature-giftshop .selected-feature-art {
+  background: radial-gradient(circle at 65% 48%, #312020 0%, #0b0b13 76%);
+}
+#work .selected-feature-giftshop .selected-feature-art img { object-fit: contain; object-position: center; }
+#work .selected-feature-giftshop .selected-feature-copy {
+  background: radial-gradient(circle at 90% 7%, rgba(200, 154, 80, .13), transparent 44%), linear-gradient(145deg, #1f1217, #120f12 78%);
+}
+#work .selected-feature-giftshop .selected-feature-meta { color: #ecd19e; }
+#work .selected-feature-giftshop .selected-meta-dot { background: #dbb776; }
+#work .selected-feature-giftshop .selected-feature-copy h3 span { color: #e5bf87; }
+#work .selected-feature-giftshop .selected-action-main { background: #e9c995; }
+#work .selected-feature-giftshop .selected-action-main:hover { background: #ffdfaa; }
+#work .selected-feature-giftshop .selected-action-secondary { color: #ead0a8; }
+@media (max-width: 980px) {
+  #work .selected-feature-giftshop .selected-feature-art img { min-height: 0; }
+}
