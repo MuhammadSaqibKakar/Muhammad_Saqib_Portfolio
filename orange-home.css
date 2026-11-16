@@ -145,3 +145,70 @@ a:focus-visible,button:focus-visible{outline:3px solid #ff8c32;outline-offset:4p
 @media(max-width:380px){
   .splash-shell .hero-person{left:79%;width:78%;height:47%;bottom:41%}
 }
+
+
+/* Compact, icon-only social rail to the far right of the hero.
+   Portrait asset and portrait styling are deliberately unchanged. */
+.splash-shell .right-copy{right:12%;width:25%}
+.splash-shell .right-credential{right:12%;width:25%}
+.hero-social-rail{
+  position:absolute;right:2.65%;top:30.5%;z-index:18;
+  display:flex;flex-direction:column;align-items:center;gap:12px;
+  padding-left:15px;border-left:1px solid #f1c4aa;
+}
+.hero-social-rail .rail-link{
+  width:44px;height:44px;flex:0 0 44px;
+  display:grid;place-items:center;
+  color:var(--ink);background:#fffdf9;border:1px solid #efcdb7;
+  border-radius:13px;box-shadow:0 5px 15px rgba(53,31,12,.09);
+  transition:transform .18s ease,box-shadow .18s ease,border-color .18s ease,background .18s ease;
+}
+.hero-social-rail .rail-link:hover{
+  transform:translateY(-2px);
+  box-shadow:0 8px 20px rgba(53,31,12,.15);
+  border-color:#ed873d;background:#fff8f2;
+}
+.hero-social-rail .rail-link:focus-visible{outline:3px solid #df670e;outline-offset:3px}
+.hero-social-rail svg{display:block;width:23px;height:23px;fill:currentColor;pointer-events:none}
+.hero-social-rail .rail-linkedin{color:#0a66c2}
+.hero-social-rail .rail-youtube{color:#ee1b20}
+.hero-social-rail .rail-github{color:#202124}
+.hero-social-rail .rail-email{color:#e96714}
+.hero-social-rail .rail-whatsapp{color:#12a64c}
+@media(min-width:821px) and (max-width:1120px){
+  .splash-shell .right-copy{right:13%;width:23.5%}
+  .splash-shell .right-credential{right:13%;width:23.5%}
+  .hero-social-rail{right:2.6%;top:30%;gap:10px;padding-left:11px}
+  .hero-social-rail .rail-link{width:40px;height:40px;flex-basis:40px;border-radius:11px}
+  .hero-social-rail svg{width:21px;height:21px}
+}
+@media(min-width:561px) and (max-width:820px){
+  .splash-shell .right-copy{right:13%;width:27%}
+  .splash-shell .right-credential{right:13%;width:27%}
+  .hero-social-rail{right:1.9%;top:30%;gap:9px;padding-left:8px}
+  .hero-social-rail .rail-link{width:34px;height:34px;flex-basis:34px;border-radius:10px}
+  .hero-social-rail svg{width:19px;height:19px}
+}
+@media(max-width:560px){
+  .splash-shell{height:960px}
+  .splash-shell .splash-orange{height:55%}
+  .splash-shell .splash-white{top:55%}
+  .splash-shell .hero-word{top:23%}
+  .splash-shell .orange-intro{top:39%;max-width:37%}
+  .splash-shell .splash-name{bottom:47%}
+  .splash-shell .right-copy{top:58%;left:7%;right:auto;bottom:auto;width:65%}
+  .splash-shell .right-copy h2{font-size:1.6rem}
+  .splash-shell .right-copy p{font-size:.72rem;max-width:215px}
+  .splash-shell .right-credential{bottom:4%;left:7%;right:auto;top:auto;width:86%;padding:14px 16px}
+  .hero-social-rail{top:59%;right:3.5%;gap:8px;padding-left:8px}
+  .hero-social-rail .rail-link{width:36px;height:36px;flex-basis:36px;border-radius:10px}
+  .hero-social-rail svg{width:20px;height:20px}
+}
+@media(max-width:380px){
+  .splash-shell{height:940px}
+  .splash-shell .right-copy{width:62%}
+  .splash-shell .right-copy h2{font-size:1.5rem}
+  .hero-social-rail{right:3%;padding-left:6px}
+  .hero-social-rail .rail-link{width:33px;height:33px;flex-basis:33px}
+}
+@media(prefers-reduced-motion:reduce){.hero-social-rail .rail-link{transition:none}}
