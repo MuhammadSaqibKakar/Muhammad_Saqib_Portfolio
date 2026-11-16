@@ -739,3 +739,50 @@ a:focus-visible,button:focus-visible{outline:3px solid #ff8c32;outline-offset:4p
     order: 2;
   }
 }
+
+
+/* Mobile splash: swap portrait to the left and introductory copy to the right.
+   This is intentionally scoped to phone widths; desktop/tablet and lower
+   sections remain exactly as designed. */
+@media (max-width: 560px) {
+  .splash-shell .hero-person {
+    left: 23%;
+    width: 85%;
+  }
+  .splash-orange .hero-word {
+    left: auto;
+    right: 5.5%;
+    top: 26%;
+    max-width: 48%;
+    font-size: clamp(2.75rem, 12.8vw, 4.15rem);
+    text-align: right;
+  }
+  .splash-orange .orange-intro {
+    left: auto;
+    right: 6%;
+    top: 50%;
+    width: 43%;
+    max-width: 43%;
+    text-align: left;
+  }
+  .splash-shell .splash-name {
+    left: auto;
+    right: 6%;
+    max-width: 44%;
+    text-align: right;
+  }
+}
+@media (max-width: 380px) {
+  .splash-shell .hero-person {
+    left: 23%;
+    width: 89%;
+  }
+  .splash-orange .hero-word {
+    font-size: clamp(2.6rem, 12.4vw, 3rem);
+  }
+  .splash-orange .orange-intro {
+    top: 51%;
+    width: 44%;
+    max-width: 44%;
+  }
+}
