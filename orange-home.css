@@ -811,3 +811,359 @@ a:focus-visible,button:focus-visible{outline:3px solid #ff8c32;outline-offset:4p
 @media (max-width: 980px) {
   #work .selected-feature-giftshop .selected-feature-art img { min-height: 0; }
 }
+
+
+/* === Selected work / engineering projects: premium editorial redesign ===
+   Only affects the four cards after the two unchanged client features.
+   Straight screenshots, consistent text-left/image-right desktop composition. */
+#work .selected-project-list {
+  gap: clamp(22px, 2.8vw, 34px);
+  margin-top: clamp(24px, 3vw, 36px);
+}
+#work .selected-project {
+  --project-accent: #a8d9b7;
+  --project-accent-hover: #d4f2db;
+  --project-base: #132a24;
+  --project-panel: #18372d;
+  --project-media: #d3e9d9;
+  --project-glow: rgba(88, 167, 126, .22);
+  position: relative;
+  isolation: isolate;
+  grid-template-columns: minmax(0, .92fr) minmax(0, 1.08fr);
+  min-height: 500px;
+  background: var(--project-base);
+  color: #f8f7f3;
+  border: 1px solid rgba(255, 255, 255, .08);
+  border-radius: 28px;
+  box-shadow: 0 20px 52px rgba(33, 29, 23, .13);
+  transition: transform .28s ease, box-shadow .28s ease;
+}
+#work .selected-project:hover,
+#work .selected-project:focus-within {
+  transform: translateY(-3px);
+  box-shadow: 0 32px 70px rgba(27, 24, 20, .21);
+}
+#work .selected-project-bsdi {
+  --project-base: #112a21;
+  --project-panel: #173c2e;
+  --project-accent: #afe5bd;
+  --project-accent-hover: #d4f4dd;
+  --project-media: #c9e2d2;
+  --project-glow: rgba(47, 135, 91, .30);
+}
+#work .selected-project-pasni {
+  --project-base: #292019;
+  --project-panel: #423024;
+  --project-accent: #f2c38d;
+  --project-accent-hover: #ffe0b6;
+  --project-media: #ead4b7;
+  --project-glow: rgba(197, 123, 55, .21);
+}
+#work .selected-project-khuzdar {
+  --project-base: #102530;
+  --project-panel: #183b49;
+  --project-accent: #a5e3e7;
+  --project-accent-hover: #d0f1f4;
+  --project-media: #c8e1e4;
+  --project-glow: rgba(54, 135, 159, .22);
+}
+#work .selected-project-completed {
+  --project-base: #1a2b29;
+  --project-panel: #2b4943;
+  --project-accent: #c6e8b4;
+  --project-accent-hover: #e4f5d9;
+  --project-media: #d0e5d5;
+  --project-glow: rgba(70, 146, 104, .24);
+}
+
+/* Text panel: strong typographic hierarchy, breathable margins and clear CTA. */
+#work .selected-project .selected-project-info,
+#work .selected-project:nth-child(even) .selected-project-info {
+  order: 1;
+  position: relative;
+  z-index: 2;
+  justify-content: center;
+  align-items: flex-start;
+  padding: clamp(34px, 4.5vw, 66px);
+  background: radial-gradient(circle at -3% 2%, var(--project-glow), transparent 56%),
+    linear-gradient(150deg, var(--project-panel), var(--project-base) 82%);
+}
+#work .selected-project .selected-project-info::before {
+  content: "";
+  position: absolute;
+  width: 58px;
+  height: 3px;
+  border-radius: 4px;
+  top: clamp(25px, 3vw, 41px);
+  left: clamp(34px, 4.5vw, 66px);
+  background: var(--project-accent);
+  opacity: .88;
+}
+#work .selected-project .selected-project-index {
+  color: var(--project-accent);
+  font-size: .70rem;
+  font-weight: 750;
+  line-height: 1.6;
+  letter-spacing: .075em;
+}
+#work .selected-project .selected-project-index i {
+  width: 22px;
+  background: currentColor;
+  opacity: .65;
+}
+#work .selected-project .selected-project-info h3 {
+  color: #fffefa;
+  font-size: clamp(2.5rem, 3.75vw, 4.15rem);
+  font-weight: 850;
+  line-height: 1.06;
+  letter-spacing: -.072em;
+  margin: 21px 0 19px;
+  max-width: 500px;
+  text-wrap: balance;
+}
+#work .selected-project .selected-project-info p {
+  color: #d4dbd5;
+  font-size: clamp(.91rem, 1.07vw, 1rem);
+  font-weight: 500;
+  line-height: 1.77;
+  max-width: 460px;
+  margin: 0;
+}
+#work .selected-project .selected-tech-light {
+  margin: 25px 0 0;
+  gap: 8px;
+}
+#work .selected-project .selected-tech-light span {
+  color: #f2f4ec;
+  background: rgba(255,255,255,.075);
+  border: 1px solid rgba(255,255,255,.17);
+  border-radius: 999px;
+  padding: 8px 12px;
+  font-size: .69rem;
+  font-weight: 700;
+}
+#work .selected-project .selected-project-links {
+  display: flex;
+  align-items: center;
+  gap: 14px 21px;
+  flex-wrap: wrap;
+  margin-top: 34px;
+}
+#work .selected-project .selected-project-links a:first-child {
+  display: inline-flex;
+  justify-content: center;
+  align-items: center;
+  gap: 10px;
+  min-height: 46px;
+  padding: 12px 20px;
+  border: none;
+  border-radius: 100px;
+  color: #172017;
+  background: var(--project-accent);
+  font-size: .79rem;
+  font-weight: 850;
+  text-decoration: none;
+  transition: background .2s, transform .2s;
+}
+#work .selected-project .selected-project-links a:first-child:hover {
+  color: #172017;
+  background: var(--project-accent-hover);
+  transform: translateY(-2px);
+}
+#work .selected-project .selected-project-links a:not(:first-child) {
+  display: inline-flex;
+  gap: 8px;
+  align-items: center;
+  color: #f2f4ee;
+  font-size: .78rem;
+  border: 0;
+  border-bottom: 1px solid rgba(255,255,255,.35);
+  padding: 4px 0 5px;
+}
+#work .selected-project .selected-project-links a:not(:first-child):hover {
+  color: var(--project-accent);
+}
+#work .selected-project .selected-access-note {
+  color: #c5cec8;
+  font-size: .76rem;
+  font-weight: 650;
+}
+
+/* Media panel: genuine interface screenshots in large, perfectly straight
+   browser frames. Soft gradients make every project distinct without clutter. */
+#work .selected-project .selected-project-visual,
+#work .selected-project:nth-child(even) .selected-project-visual {
+  order: 2;
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: clamp(32px, 4vw, 57px) clamp(24px, 3.4vw, 48px) clamp(54px, 5vw, 70px);
+  min-width: 0;
+  overflow: hidden;
+  isolation: isolate;
+  background: radial-gradient(ellipse at 65% 38%, rgba(255,255,255,.76), transparent 59%),
+    radial-gradient(ellipse at 18% 83%, var(--project-glow), transparent 65%),
+    var(--project-media);
+}
+#work .selected-project .selected-project-visual::before {
+  content: "";
+  display: block;
+  position: absolute;
+  z-index: -1;
+  inset: 0;
+  width: auto;
+  height: auto;
+  border: 0;
+  border-radius: 0;
+  transform: none;
+  opacity: .25;
+  background-image: linear-gradient(rgba(255,255,255,.7) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(255,255,255,.7) 1px, transparent 1px);
+  background-size: 42px 42px;
+  pointer-events: none;
+}
+#work .selected-project .selected-browser,
+#work .selected-project:nth-child(even) .selected-browser {
+  position: relative;
+  z-index: 1;
+  width: 100%;
+  max-width: 650px;
+  margin: 0;
+  transform: none;
+  border: 1px solid rgba(22, 36, 33, .16);
+  border-radius: 15px;
+  overflow: hidden;
+  background: white;
+  box-shadow: 0 28px 50px rgba(23,36,32,.20), 0 5px 12px rgba(23,36,32,.08);
+  transition: transform .35s ease, box-shadow .35s ease;
+}
+#work .selected-project .selected-project-visual:hover .selected-browser,
+#work .selected-project .selected-project-visual:focus-visible .selected-browser {
+  transform: translateY(-4px);
+  box-shadow: 0 33px 58px rgba(23,36,32,.25),0 7px 15px rgba(23,36,32,.09);
+}
+#work .selected-project .selected-browser-bar {
+  height: 39px;
+  background: #fcfcfb;
+  color: #5b6664;
+  border-bottom: 1px solid #e4e9e5;
+  padding-inline: 15px;
+}
+#work .selected-project .selected-browser-title {
+  color: #43514d;
+  font-size: .64rem;
+  font-weight: 750;
+  letter-spacing: .015em;
+}
+#work .selected-project .selected-browser > img {
+  display: block;
+  width: 100%;
+  height: auto;
+  aspect-ratio: 16 / 10;
+  object-fit: contain;
+  object-position: top center;
+  background: #fff;
+}
+#work .selected-project .selected-visual-label {
+  position: absolute;
+  left: clamp(24px, 3.4vw, 48px);
+  bottom: 23px;
+  z-index: 1;
+  display: inline-flex;
+  align-items: center;
+  gap: 9px;
+  color: #37443f;
+  font: 700 .63rem/1.4 "IBM Plex Mono", monospace;
+  letter-spacing: .055em;
+}
+#work .selected-project .selected-visual-label::before {
+  content: "";
+  width: 18px;
+  height: 1px;
+  background: #526f63;
+}
+
+/* Keep the established text-left, image-right layout on desktop and a
+   generous screenshot-first editorial stack on tablets and mobile. */
+@media (min-width: 981px) {
+  #work .selected-project {
+    grid-template-columns: minmax(0, .92fr) minmax(0, 1.08fr);
+  }
+  #work .selected-project .selected-project-info,
+  #work .selected-project:nth-child(even) .selected-project-info { order: 1; }
+  #work .selected-project .selected-project-visual,
+  #work .selected-project:nth-child(even) .selected-project-visual { order: 2; }
+}
+@media (max-width: 980px) {
+  #work .selected-project { grid-template-columns: minmax(0,1fr); min-height: 0; }
+  #work .selected-project .selected-project-visual,
+  #work .selected-project:nth-child(even) .selected-project-visual {
+    order: 1;
+    min-height: 0;
+    padding: 36px 34px 60px;
+  }
+  #work .selected-project .selected-project-info,
+  #work .selected-project:nth-child(even) .selected-project-info {
+    order: 2;
+    padding: 50px clamp(30px, 5vw, 56px) 44px;
+  }
+  #work .selected-project .selected-project-info::before {
+    top: 31px;
+    left: clamp(30px, 5vw, 56px);
+  }
+  #work .selected-project .selected-project-info h3 {
+    font-size: clamp(2.45rem, 5vw, 3.5rem);
+  }
+  #work .selected-project .selected-visual-label { left: 34px; bottom: 20px; }
+}
+@media (max-width: 560px) {
+  #work .selected-project-list { gap: 19px; margin-top: 24px; }
+  #work .selected-project { border-radius: 21px; }
+  #work .selected-project .selected-project-visual,
+  #work .selected-project:nth-child(even) .selected-project-visual {
+    padding: 24px 19px 51px;
+  }
+  #work .selected-project .selected-visual-label {
+    left: 20px; bottom: 18px; font-size: .55rem;
+    max-width: calc(100% - 40px);
+  }
+  #work .selected-project .selected-browser { border-radius: 11px; }
+  #work .selected-project .selected-browser-bar { height: 30px; padding-inline: 10px; }
+  #work .selected-project .selected-browser-title { font-size: .53rem; }
+  #work .selected-project .selected-project-info,
+  #work .selected-project:nth-child(even) .selected-project-info {
+    padding: 50px 25px 30px;
+  }
+  #work .selected-project .selected-project-info::before {
+    left: 25px; top: 27px; width: 45px;
+  }
+  #work .selected-project .selected-project-index {
+    font-size: .60rem; letter-spacing: .03em;
+  }
+  #work .selected-project .selected-project-info h3 {
+    font-size: clamp(2.2rem, 9.6vw, 2.8rem);
+    margin: 16px 0;
+  }
+  #work .selected-project .selected-project-info p { font-size: .88rem; }
+  #work .selected-project .selected-tech-light { margin-top: 21px; gap: 7px; }
+  #work .selected-project .selected-tech-light span {
+    font-size: .64rem; padding: 7px 10px;
+  }
+  #work .selected-project .selected-project-links { margin-top: 26px; gap: 14px; }
+  #work .selected-project .selected-project-links a:first-child {
+    min-height: 44px; padding: 11px 16px;
+  }
+}
+@media (prefers-reduced-motion: reduce) {
+  #work .selected-project,
+  #work .selected-project .selected-browser,
+  #work .selected-project .selected-project-links a:first-child {
+    transition: none;
+  }
+  #work .selected-project:hover,
+  #work .selected-project .selected-project-visual:hover .selected-browser,
+  #work .selected-project .selected-project-links a:first-child:hover {
+    transform: none;
+  }
+}
