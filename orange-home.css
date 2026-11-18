@@ -1167,3 +1167,64 @@ a:focus-visible,button:focus-visible{outline:3px solid #ff8c32;outline-offset:4p
     transform: none;
   }
 }
+
+
+/* Mobile hero v14: portrait centered with BUILD layered behind.
+   Keep the existing desktop and tablet hero unchanged. */
+@media (max-width: 560px) {
+  .splash-orange .hero-word {
+    left: 50%;
+    right: auto;
+    top: 25%;
+    width: max-content;
+    max-width: none;
+    transform: translateX(-50%);
+    font-size: clamp(4.45rem, 19.2vw, 6.2rem);
+    letter-spacing: -.078em;
+    text-align: center;
+    z-index: 1;
+    pointer-events: none;
+  }
+  .splash-shell .hero-person {
+    left: 50%;
+    bottom: 43%;
+    width: 90%;
+    height: 48%;
+    max-height: none;
+    transform: translateX(-50%);
+    object-fit: contain;
+    object-position: bottom center;
+    z-index: 7;
+  }
+  .splash-orange .orange-intro {
+    left: 6%;
+    right: auto;
+    top: 58%;
+    width: 44%;
+    max-width: 44%;
+    text-align: left;
+  }
+  .splash-shell .splash-name {
+    left: 6%;
+    right: auto;
+    max-width: 68%;
+    text-align: left;
+  }
+}
+@media (max-width: 380px) {
+  .splash-orange .hero-word {
+    font-size: 19vw;
+    top: 25%;
+  }
+  .splash-shell .hero-person {
+    left: 50%;
+    width: 94%;
+    height: 47%;
+    bottom: 43.2%;
+  }
+  .splash-orange .orange-intro {
+    top: 58%;
+    width: 44%;
+    max-width: 44%;
+  }
+}
