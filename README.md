@@ -1,6 +1,6 @@
 # Muhammad Saqib Kakar — Software Engineer Portfolio
 
-Live site: https://muhammadsaqibkakar.github.io/Muhammad_Saqib_Portfolio/
+Live site: https://saqibkakar.com/
 
 A lightweight, responsive GitHub Pages portfolio showcasing documented software-engineering work, skills, professional experience, education and ways to get in touch.
 
@@ -29,7 +29,9 @@ Form submissions are routed by a third party. See `privacy.html` for the publish
 
 ## Domain setup
 
-Do not add a `CNAME` file or change canonical/sitemap URLs until ownership of a custom domain has been confirmed and the DNS/HTTPS setup is complete. For now, the GitHub Pages URL is canonical.
+The custom domain is `saqibkakar.com`, served directly from this repository on GitHub Pages. Hostinger DNS points the apex and `www` to GitHub Pages. The root URL is canonical. Keep `CNAME`, canonical/Open Graph/JSON-LD URLs, `sitemap.xml` and `robots.txt` consistent. The older user-site repository publishes only compatibility redirects from `/docs`; its original files are retained outside that publishing directory.
+
+GitHub Pages handles HTTPS, `www` and the default project-domain redirects. Former `/Muhammad_Saqib_Portfolio/` document paths use static compatibility redirects because GitHub Pages does not support arbitrary path-level HTTP 301 rules.
 
 ## Publishing
 
